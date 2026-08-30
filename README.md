@@ -18,11 +18,11 @@
 
 ### About
 
-- 🧑‍💻 **.NET developer** — I've been writing C# since high school and I do it professionally today.
-- 🎓 **Ing. (M.Sc.)** from VŠB – Technical University of Ostrava. Thesis: **GPU computation parallelization** — the benchmark suite behind it is [public here](https://github.com/JaKuBisz/gpu-benchmarks).
+- 🧑‍💻 **.NET developer.** I've been writing C# since high school and I do it professionally today.
+- 🎓 **Bc.** at VŠB – Technical University of Ostrava, **Ing. (M.Sc.)** at Silesian University in Opava. Both theses shipped working software: [**HashTrack**](https://github.com/JaKuBisz/HashTrack), an Outlook add-in in C# (bachelor's), and a [**GPU benchmark suite**](https://github.com/JaKuBisz/gpu-benchmarks) on parallelization (master's).
 - ⚙️ Most of my side projects start because something in my flat or my car annoyed me: OBD2 diagnostics, 3D printer telemetry, BLE devices, home automation.
-- 🤖 Currently working with **LLM tooling, MCP servers and workflow automation** — and dragging them into the .NET ecosystem, where they're still rare.
-- 💬 Happy to talk about performance and parallelism, clean layered architecture, or getting a 3D printer to report into Home Assistant.
+- 🤖 Currently working with **LLM tooling, MCP servers and workflow automation**, and dragging them into the .NET ecosystem, where they're still rare.
+- 💬 Happy to talk about clean layered architecture and dependency injection, performance and parallelism, or getting a 3D printer to report into Home Assistant.
 
 ---
 
@@ -58,35 +58,39 @@
 <table>
   <tr>
     <td width="50%" valign="top">
-      <h4><a href="https://github.com/JaKuBisz/gpu-benchmarks">⚡ gpu-benchmarks</a></h4>
-      <p>When is a GPU actually worth it? Benchmarks matrix multiplication and Game of Life
-      across sequential CPU, parallel CPU and GPU, with correctness validation and Amdahl's
-      law analysis. The practical part of my master's thesis.</p>
-      <p><code>.NET 8</code> <code>ILGPU</code> <code>xUnit</code> <code>GitHub Actions</code></p>
-    </td>
-    <td width="50%" valign="top">
-      <h4><a href="https://github.com/JaKuBisz/OBD2AI">🚗 OBD2AI</a></h4>
-      <p>Android app that reads live telemetry from your car's OBD2 port over Bluetooth and
-      explains faults in plain language using an LLM — so <code>P0420</code> becomes something
-      you can act on.</p>
-      <p><code>Kotlin</code> <code>Bluetooth</code> <code>OpenAI API</code></p>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
       <h4><a href="https://github.com/JaKuBisz/HashTrack">🏷️ HashTrack</a></h4>
-      <p>Outlook add-in that adds hashtags to mail, calendar and tasks. Layered C#
-      architecture with an Autofac container that registers services by scanning for
-      attributes, and a tag-clustering algorithm that knows <code>#Sprint1</code> and
-      <code>#Sprint2</code> aren't the same thing.</p>
-      <p><code>C#</code> <code>VSTO</code> <code>WPF/MVVM</code> <code>Autofac</code> <code>SQLite</code></p>
+      <p>Outlook add-in that adds hashtags to mail, calendar and tasks, and the biggest
+      thing I've built. Layered C# architecture with an Autofac container that registers
+      services by scanning for attributes, so adding a service means adding an attribute
+      and nothing else. Tag clustering compares digits exactly and text fuzzily, so
+      <code>#invoice</code> and <code>#invoices</code> merge but <code>#Sprint1</code> and
+      <code>#Sprint2</code> never do. My bachelor's thesis.</p>
+      <p><code>C#</code> <code>VSTO</code> <code>WPF/MVVM</code> <code>Autofac</code> <code>Entity Framework</code> <code>SQLite</code></p>
     </td>
     <td width="50%" valign="top">
-      <h4><a href="https://github.com/bambulab/BambuStudio/pull/12060">🖨️ BambuStudio — upstream contribution</a></h4>
+      <h4><a href="https://github.com/bambulab/BambuStudio/pull/12060">🖨️ BambuStudio upstream contribution</a></h4>
       <p>Open PR against Bambu Lab's slicer fixing third-party filaments being unusable in
       the AMS, and remaining weight never updating. Finding and fixing a real bug in a large
       unfamiliar C++ codebase.</p>
       <p><code>C++</code> <code>open source</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h4><a href="https://github.com/JaKuBisz/OBD2AI">🚗 OBD2AI</a></h4>
+      <p>Android app that reads live telemetry from your car's OBD2 port over Bluetooth and
+      explains faults in plain language using an LLM, so <code>P0420</code> becomes something
+      you can act on.</p>
+      <p><code>Kotlin</code> <code>Bluetooth</code> <code>OpenAI API</code></p>
+    </td>
+    <td width="50%" valign="top">
+      <h4><a href="https://github.com/JaKuBisz/gpu-benchmarks">⚡ gpu-benchmarks</a></h4>
+      <p>When is a GPU actually worth it? Turns out often it isn't: on a 64×64 matrix
+      multiply the GPU came out 11× <em>slower</em> than a plain loop, because transfer
+      cost dwarfs the arithmetic. Small and focused, but the numbers are honest, every
+      variant is validated, and CI runs on three platforms. Practical part of my
+      master's thesis.</p>
+      <p><code>.NET 8</code> <code>ILGPU</code> <code>xUnit</code> <code>GitHub Actions</code></p>
     </td>
   </tr>
 </table>
@@ -105,5 +109,5 @@
 ---
 
 <p align="center">
-  <sub>Open to interesting problems — especially where .NET meets hardware or AI.</sub>
+  <sub>Open to interesting problems, especially where .NET meets hardware or AI.</sub>
 </p>
